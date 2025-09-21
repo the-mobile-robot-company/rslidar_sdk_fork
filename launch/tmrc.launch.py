@@ -18,6 +18,6 @@ def generate_launch_description():
             executable='rslidar_sdk_node', 
             output='screen', 
             parameters=[{'config_path': config_file}],
-            remappings=[('/rslidar_imu_data', 'imu/data'),
-                        ('/rslidar_points', 'scan/lidar_3d')])
+            remappings=[('/rslidar_points', '/hardware_layer/scan/lidar_3d'),
+                        ('/rslidar_imu_data', '/hardware_layer/imu/data')])
     ])
